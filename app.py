@@ -1,11 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from pathlib import Path
-from PIL import Image
-import settings
-import helper
-import cv2
-import base64
-from io import BytesIO
 
 app = Flask(__name__)
 
