@@ -31,12 +31,24 @@ st.sidebar.image("logo_2.png", use_column_width=True)
 # Sidebar
 st.sidebar.header("Parameter Tuning")
 # Add the CSS file to your Streamlit app
-st.markdown(
-    """<style>
-    {% include "style.css" %}
-    </style>""",
-    unsafe_allow_html=True,
-)
+# Define the inline CSS
+inline_css = """
+<style>
+body {
+  background-color: #080000;
+}
+.stApp {
+  color: #FFFFFF;
+}
+.stApp > div {
+  background-color: #111131;
+}
+/* Customize other Streamlit elements as needed */
+</style>
+"""
+
+# Apply the inline CSS
+st.markdown(inline_css, unsafe_allow_html=True)
 
 # Model Options
 model_type = st.sidebar.radio(
