@@ -1,0 +1,16 @@
+/* style.css */
+
+body {
+    background-color: #080000;
+  }
+  
+  .stApp {
+    color: #FFFFFF;
+  }
+  
+  .stApp > div {
+    background-color: #111131;
+  }
+  
+  /* Customize other Streamlit elements as needed */
+  
