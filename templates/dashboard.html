@@ -1,0 +1,49 @@
+<!-- Add a webcam option -->
+<h3>Or Use Webcam:</h3>
+<button id="start-webcam">Start Webcam</button>
+<video id="webcam-feed" style="display: none;"></video>
+<button id="stop-webcam" style="display: none;">Stop Webcam</button>
+
+<form method="POST" action="/dashboard.html" enctype="multipart/form-data">
+    <input type="file" name="image" accept=".jpg, .jpeg, .png, .bmp, .webp">
+    <label for="confidence">Select Model Confidence:</label>
+    <input type="range" name="confidence" min="25" max="100" value="40">
+    <button type="submit">Detect Objects</button>
+</form>
+
+<label for="model-type">Select Task:</label>
+<select id="model-type" name="model-type">
+    <option value="Detection">Detection</option>
+    <option value="Segmentation">Segmentation</option>
+</select>
+
+<!-- Add JavaScript to handle webcam -->
+<script>
+    const startWebcamButton = document.getElementById('start-webcam');
+    const stopWebcamButton = document.getElementById('stop-webcam');
+    const webcamFeed = document.getElementById('webcam-feed');
+    
+    let stream = null;
+    
+    startWebcamButton.addEventListener('click', async () => {
+        try {
+            stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            webcamFeed.srcObject = stream;
+            webcamFeed.style.display = 'block';
+            startWebcamButton.style.display = 'none';
+            stopWebcamButton.style.display = 'block';
+        } catch (error) {
+            console.error('Error accessing webcam:', error);
+        }
+    });
+    
+    stopWebcamButton.addEventListener('click', () => {
+        if (stream) {
+            stream.getTracks().forEach(track => track.stop());
+        }
+        webcamFeed.srcObject = null;
+        webcamFeed.style.display = 'none';
+        startWebcamButton.style.display = 'block';
+        stopWebcamButton.style.display = 'none';
+    });
+</script>

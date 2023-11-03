@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index_style.css">
+    
+    <style>
+        /* Hide the video controls and pause button */
+        video::-webkit-media-controls {
+            display: none;
+        }
+
+        /* Set video dimensions to fill the screen */
+        video {
+            width: 100%;
+            height: auto; /* 100% of viewport height */
+            object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="top-menu">
+                <li class="logo"><img src="/static/logo.png" alt="Logo" width="150" height="150"></li>
+                <li><a href="index.html" class="nav-button">Home</a></li>
+                <li><a href="http://localhost:8501" class="nav-button" target="_blank">Security Dashboard</a></li>
+                <li><a href="http://localhost:8502" class="nav-button" target="_blank">Analytics Dashboard</a></li>
+                <li><a href="about.html" class="nav-button">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>About Us</h1>
+            <p>Team - Pixel Pioneers</p>
+        </section>
+        <section class="functionality">
+            <!-- Embed the video from the static folder with autoplay and loop attributes -->
+            <video autoplay loop muted>
+                <source src="/static/about1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>Application by Team Pixel Pioneers &copy; 2023</p>
+    </footer>
+</body>
+</html>
