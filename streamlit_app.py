@@ -35,13 +35,13 @@ st.sidebar.header("Parameter Tuning")
 inline_css = """
 <style>
 body {
-  background-color: #080000;
+  background-color: #111131;
 }
 .stApp {
   color: #FFFFFF;
 }
 .stApp > div {
-  background-color: #111131;
+  background-color: #080000;
 }
 /* Customize other Streamlit elements as needed */
 </style>
