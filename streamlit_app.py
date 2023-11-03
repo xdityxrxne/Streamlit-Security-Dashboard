@@ -30,17 +30,14 @@ st.title("Security Dashboard")
 st.sidebar.image("logo_2.png", use_column_width=True)
 # Sidebar
 st.sidebar.header("Parameter Tuning")
+# Add the CSS file to your Streamlit app
 st.markdown(
-    """
-<style>
-.sidebar .sidebar-content {
-    background-image: linear-gradient(#2e7bcf,#2e7bcf);
-    color: white;
-}
-</style>
-""",
+    """<style>
+    {% include "style.css" %}
+    </style>""",
     unsafe_allow_html=True,
 )
+
 # Model Options
 model_type = st.sidebar.radio(
     "Select Task", ['Detection', 'Segmentation'])
