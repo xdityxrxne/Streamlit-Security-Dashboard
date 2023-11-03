@@ -1,0 +1,123 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+        /* Darkest indigo to dark indigo to dark blue gradient */
+    /* Midnight Blue to Deep Purple gradient */
+    background: linear-gradient(to right, #0f0f42, #800080);
+    /* Dark indigo to dark blue gradient */
+    color: #fff;
+    padding: 5px; /* Increased header padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjusted margin for logo */
+.top-menu .logo {
+    margin-right: 100px; /* Add some space between logo and buttons */
+    margin-left: 50px
+}
+
+/* Adjusted margin for navigation links */
+.top-menu li {
+    margin-right: 30px; /* Add space between buttons */
+}
+
+/* Button styles with white text and border */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white; /* Set text color to white */
+    border: 2px solid white; /* Set border color to white */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Added border-color transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav li a:hover {
+    background-color: white; /* Change the background color on hover */
+    color: #3498db; /* Change the text color on hover */
+    border-color: #3498db; /* Change the border color on hover */
+}
+
+.logo img {
+    width: 110px; /* Set the width to 200px */
+    height: 71px; /* Set the height to 100px */
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.functionality {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.functionality h2 {
+    font-size: 1.5rem;
+}
+
+.functionality ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+footer {
+    /* Midnight Blue to Deep Purple gradient */
+    background: linear-gradient(to right, #0f0f42, #800080);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Increased footer padding */
+}
